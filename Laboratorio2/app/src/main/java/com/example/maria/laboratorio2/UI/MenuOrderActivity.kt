@@ -9,7 +9,7 @@ import android.widget.ListView
 import android.widget.Toast
 
 class MenuOrderActivity : AppCompatActivity() {
-    var array = arrayOf("Cafe", "Te", "Pie", "Capuchino", "Galleta")
+    var array = arrayOf("Cafe", "Té", "Pie", "Capuchino", "Galleta", "Cupcake", "Latte", "Frapuchino")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,7 +31,7 @@ class MenuOrderActivity : AppCompatActivity() {
                 myapp.add(itemValue)
                 // Toast the values
                 Toast.makeText(applicationContext,
-                    "Position :$position\nItem Value : $itemValue", Toast.LENGTH_LONG)
+                    "$itemValue fue agregado al pedido exitosamente", Toast.LENGTH_LONG)
                     .show()
             }
         }

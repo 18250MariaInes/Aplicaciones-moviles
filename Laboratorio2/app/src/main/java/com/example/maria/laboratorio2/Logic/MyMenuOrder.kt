@@ -15,6 +15,7 @@ class MyMenuOrder (
     override fun del(elementIndex: Int){
         menuOrder.removeAt(elementIndex);
     } // Elimina elemento
-    override fun done() {
+    override fun done(): String {
+        return "Hola"
     }// Realiza pedido
 }

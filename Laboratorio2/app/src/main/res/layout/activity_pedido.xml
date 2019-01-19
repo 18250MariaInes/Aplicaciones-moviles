@@ -23,5 +23,29 @@
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="184dp"
             android:layout_marginStart="184dp" app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="30dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="184dp"
-            android:layout_marginRight="184dp"/>
+            android:layout_marginRight="184dp"
+            android:textSize="32sp"
+    />
+    //listview
+    <ListView
+            android:id="@+id/listview_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/backMenu" tools:layout_editor_absoluteX="45dp"/>
+    <Button
+            android:text="Limpiar Pedido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonLimpiar"
+            app:layout_constraintLeft_toRightOf="@+id/backMenu"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="1dp"
+            android:onClick="borrarPedido"/>
+    <Button
+            android:text="Realizar pedido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonRealizarPedido"
+            app:layout_constraintLeft_toRightOf="@+id/buttonLimpiar" app:layout_constraintBottom_toBottomOf="parent"
+            android:onClick="realizarPedido"/>
+    />
 </android.support.constraint.ConstraintLayout>
