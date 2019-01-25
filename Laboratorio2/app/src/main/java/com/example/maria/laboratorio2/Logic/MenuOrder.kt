@@ -1,4 +1,5 @@
 package com.example.maria.laboratorio2
+//INTERFAZ PREDETERMINADA
 
 interface MenuOrder {
     var menuOrder: ArrayList<String> // Pedido

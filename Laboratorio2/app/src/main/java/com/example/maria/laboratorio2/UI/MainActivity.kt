@@ -18,20 +18,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
-
+    //boton que abre actividad de menu del restaurante
     fun abrirmenu(view: View) {
         val intent = Intent(this, MenuOrderActivity::class.java)
-       // val editText = findViewById<View>(R.id.buttonPanel) as EditText
-      //  val message = editText.text.toString()
-        //intent.putExtra(EXTRA_MESSAGE, message)
         startActivity(intent)
     }
-
+    //boton que abre actividad de pedido
     fun abrirpedido (view: View){
         val intent = Intent(this, PedidoActivity::class.java)
-        // val editText = findViewById<View>(R.id.buttonPanel) as EditText
-        //  val message = editText.text.toString()
-        //intent.putExtra(EXTRA_MESSAGE, message)
         startActivity(intent)
     }
 

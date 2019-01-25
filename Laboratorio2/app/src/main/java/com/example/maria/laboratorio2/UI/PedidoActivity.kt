@@ -43,8 +43,10 @@ class PedidoActivity : AppCompatActivity() {
                 val itemValue = listView.getItemAtPosition(position) as String
                 //val position=pedido.indexOf(itemValue)
                 val myapp: MyApplication = applicationContext as MyApplication
+                //position
                 myapp.del(position)
-                adapter.notifyDataSetChanged()
+               // adapter.notifyDataSetChanged()
+                listView.invalidateViews()
                 // Toast the values
                 Toast.makeText(
                     applicationContext,
@@ -52,10 +54,23 @@ class PedidoActivity : AppCompatActivity() {
                 )
                     .show()
                 adapter.notifyDataSetChanged()
+                listView.adapter=adapter
                 return true
             }
             //adapter.notifyDataSetChanged()
         }
+        /*listView.setOnItemLongClickListener{_,_,position,_->
+            val itemValue = listView.getItemAtPosition(position) as String
+            val myapp: MyApplication = applicationContext as MyApplication
+            myapp.del(position)
+            listView.invalidateViews()
+            Toast.makeText(
+                applicationContext,
+                "$itemValue fue SACADO", Toast.LENGTH_LONG
+            )
+                .show()
+            true
+        }*/
 
 
     }
@@ -67,7 +82,7 @@ class PedidoActivity : AppCompatActivity() {
     fun borrarPedido (view: View){
         val myapp:MyApplication = applicationContext as MyApplication
         myapp.clear()
-
+        Toast.makeText(applicationContext, "Se ha borrado todo el pedido exitosamente", Toast.LENGTH_LONG).show()
     }
 
     fun realizarPedido (view: View){

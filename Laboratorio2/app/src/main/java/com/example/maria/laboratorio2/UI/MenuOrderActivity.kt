@@ -9,19 +9,19 @@ import android.widget.ListView
 import android.widget.Toast
 
 class MenuOrderActivity : AppCompatActivity() {
-    var array = arrayOf("Cafe", "Té", "Pie", "Capuchino", "Galleta", "Cupcake", "Latte", "Frapuchino")
+    var array = arrayOf("Cafe", "Té", "Pie", "Capuchino", "Galleta", "Cupcake", "Latte", "Frapuchino")//menu del restaurante
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu_order)
-
+    //adapter de array para visualizar menu
         val adapter = ArrayAdapter(this,
             R.layout.listview, array)
 
         val listView: ListView = this.findViewById(R.id.listview_1)
         listView.setAdapter(adapter)
         listView.onItemClickListener = object : AdapterView.OnItemClickListener {
-
+            //metodo activado al hacer click en un opcion, es agregado a la orden
             override fun onItemClick(parent: AdapterView<*>, view: View,
                                      position: Int, id: Long) {
 
@@ -36,10 +36,11 @@ class MenuOrderActivity : AppCompatActivity() {
             }
         }
     }
-
+    //boton que regresa a menu
     fun regresarmenu (view: View){
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
+        //finish()
     }
 
 
